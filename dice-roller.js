@@ -11,11 +11,14 @@ function getRandomNumber(rollNumber, sideNumber) {
         console.log('Please make sure your numbers are valid');
     } else {
         const userRollResults = [];
+        let sumOfRolls = 0;
         for (let i = 0; i < rollNumber; i++) {
             const rollResult = Math.floor(Math.random() * sideNumber) + 1;
             userRollResults.push(rollResult);
+            sumOfRolls += rollResult
         }
-        console.log('Your dice rolls are:', userRollResults);
+        console.log(userRollResults);
+        console.log('Your dice rolls are:', sumOfRolls);
     }
 }
 rollDice();
